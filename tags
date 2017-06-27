@@ -1,0 +1,4 @@
+Mselect-genes	select-genes.c	/^main (int argc, char **argv)$/
+call_emmix	select-genes.c	/^call_emmix (char **argv, char *t, float *tl, int */
+strip_cr	select-genes.c	/^strip_cr (char s[LINE_LENGTH], char t[LINE_LENGTH]/
+tabcompare	select-genes.c	/^tabcompare (const void *p1, const void *p2)$/

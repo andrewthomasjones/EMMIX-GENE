@@ -1,0 +1,101 @@
+1) EMMIX-f1.f is same as EMFAC.f
+2) EMMIX-f2.f is same as EMFACe.f
+
+
+
+1) For emmix-t that is needed in select-genes and in cluster-tissues 
+for ordering the gene groups in terms of the group means, modify EMMIX.max
+accordingly and compile emmix.f
+
+
+MNIND     120 ( upper bound on the no. of tissues)
+NATT        1 (always)
+MAXNG       3 (always)
+
+
+2) For emmix-spher that is needed in cluster-genes in ordering the gene groups 
+in terms of the group means, modify EMMIX.max accordingly and compile 
+emmix-spher.f.
+
+MNIND    5000 (upper bound on the no. of genes)
+NATT      120 (upper bound on the no. of tissues)
+MAXNG      50 (upper bound on the no. of groups of genes)
+
+To run the robust version, type Y for options and then specify option 11.
+
+3) For emmix that is needed in cluster-tissues in clustering the tissues,
+modify EMMIX.max accordingly and compile emmix.f
+
+MNIND     120 (upper bound on the no. of tissues)
+NATT       60 (upper bound on the no. of genes within a group or the no.
+                of groups of genes)
+MAXNG       5 (upper bound on the no. of subclasses of tissues)
+
+
+4) For emmix-f1 that is needed in cluster-tissues in clustering the tissues, 
+modify EMMIX.max accordingly and compile emmix-f1.f
+
+MNIND     120 (upper bound on the no. of tissues)
+NATT       60 (upper bound on the no. of genes within a group or the no.
+                of groups of genes)
+NATTQ      10 (upper bound on the no. of factors)
+MAXNG       5 (upper bound on the no. of subclasses of tissues)
+
+
+
+5) For emmix-f2 that is needed in cluster-tissues in clustering the tissues, 
+modify EMMIX.max accordingly and compile emmix-f2.f
+
+MNIND     120  (upper bound on the no. of tissues)
+NATT       60* (upper bound on the no. of genes within a group or the no.
+                of groups of genes)
+NATTQ      10  (upper bound on the no. of factors)
+MAXNG       5  (upper bound on the no. of subclasses of tissues)
+
+*  But in practice, this could be very large - as large as 2000, say
+   but there may be problems compiling it with such a large value
+
+
+The PC version is in on my c-drive in the directory 
+
+                program filesemmixgene-pc
+
+
+To compile programs needed by EMMIX-GENE, use the programs icon to go to 
+
+                Compaq Visual Fortran 6
+                Fortran command prompt
+
+cd to appropriate directory by
+
+                cd \microarrays\emmix-gene
+
+To compile program emmix.f using FORTRAN 90 program, type
+
+                f90 /fast emmix.f
+
+after changing 
+
+DPMPAR=    2.2250738585072D-308
+
+(the line with d-308 in it) to
+
+ DPMPAR=    2.22507385850721D-308
+
+i.e. add a 1 before the D.
+
+After file has been compiled, move the execution file emmix.exe to the
+directory program files/emmixgene-pc, type
+
+                 mv emmix.exe c:\program files\emmixgene-pc
+
+If that doesn't work, replace program files by prog~1
+
+To look at what is in the directory, type
+
+                 dir
+
+
+To run EMMIX-GENE, use the programs icon to go to
+                /programs file/emmixgene-pc
+ 

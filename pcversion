@@ -1,0 +1,33 @@
+The PC version is in on my c-drive in the directory 
+
+                program files\emmixgene
+
+
+To compile programs needed by EMMIX-GENE, use the programs icon to go to 
+
+                Compaq Visual Fortran 6
+                Fortran command prompt
+
+cd to appropriate directory by
+
+                cd \microarrays\emmix-gene
+
+To compile program emmix.f using FORTRAN 90 program, type
+
+                f90 /fast emmix.f
+
+After file has been compiled, move the execution file emmix.exe to the
+directory program files/emmixgene, type
+
+                 mv emmix.exe c:\program files\emmixgene
+
+If that doesn't work, replace program files by prog~1
+
+To look at what is in the directory, type
+
+                 dir
+
+
+To run EMMIX-GENE, use the programs icon to go to
+                /programs file/emmixgene
+ 
