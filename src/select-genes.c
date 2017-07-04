@@ -411,20 +411,20 @@ call_emmix (char **argv, char *t, float *tl, int *sm, int *er, int col, int g)
   fflush(stdout);
   fflush(stdin);
 
-  if (g == 1)
-    {
-      sprintf (s, "%s < input1.%d > %s ", EMMIXT_EXE, getpid (), NUL);
-      system (s);
-      sprintf (s, "%s < input2.%d > %s ", EMMIXT_EXE, getpid (), NUL);
-      system (s);
-    }
-  else
-    {
-      sprintf (s, "%s < input3.%d > %s ", EMMIXT_EXE, getpid (), NUL);
-      system (s);
-      sprintf (s, "%s < input4.%d > %s ", EMMIXT_EXE, getpid (), NUL);
-      system (s);
-    }
+  //~ if (g == 1)
+    //~ {
+      //~ sprintf (s, "%s < input1.%d > %s ", EMMIXT_EXE, getpid (), NUL);
+      //~ system (s);
+      //~ sprintf (s, "%s < input2.%d > %s ", EMMIXT_EXE, getpid (), NUL);
+      //~ system (s);
+    //~ }
+  //~ else
+    //~ {
+      //~ sprintf (s, "%s < input3.%d > %s ", EMMIXT_EXE, getpid (), NUL);
+      //~ system (s);
+      //~ sprintf (s, "%s < input4.%d > %s ", EMMIXT_EXE, getpid (), NUL);
+      //~ system (s);
+    //~ }
 
   sprintf (s, "out1.%d", getpid ());
   f2 = fopen (s, "r");

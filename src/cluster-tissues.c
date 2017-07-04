@@ -42,7 +42,7 @@
 #include <stdio.h>
 #include <stdlib.h>         /* calloc */
 #include <string.h>
-#include "emmix_win32.h"
+//~ #include "emmix_win32.h"
 
 /* filename, number of clusters, number of rows, number of
    vars/dimensions, number of factor

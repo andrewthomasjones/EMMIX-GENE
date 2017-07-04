@@ -56,8 +56,8 @@
 #include <stdlib.h>		/* exit, system */
 #include <stdio.h>		/* printf, scanf */
 #include <string.h>		/* strtok */
-#include "emmix_win32.h"
-#include <windows.h>
+//~ #include "emmix_win32.h"
+//~ #include <windows.h>
 
 typedef char FILENAME[255];
 FILENAME* group_filename;
